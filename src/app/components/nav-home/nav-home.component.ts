@@ -13,26 +13,9 @@ export class NavHomeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.scrollListener()
   }
-
-  activeSection(section: string){
-    this.clearActive();
-    switch(section){
-      case 'home':
-        this.home = true;
-        this.scrollToSection(1);
-        break;
-      case 'team':
-        this.team = true;
-        this.scrollToSection(2);
-        break;
-      case 'content':
-        this.content = true;
-        this.scrollToSection(3);
-        break;
-    }
-  }
-
+  
   clearActive(){
     this.home = false;
     this.content = false;
@@ -41,9 +24,25 @@ export class NavHomeComponent implements OnInit {
   
   scrollToSection(value: number){
     let sectionSize = window.innerHeight;
-    console.log("Section", value);
-    console.log("Section size", sectionSize);
     window.scroll(0 , sectionSize * (value-1));
+  }
+
+  scrollListener(){
+    let sectionSize = window.innerHeight;
+    window.onscroll = (e: any) => {
+      if(window.scrollY*1.5 <= sectionSize){
+        this.clearActive();
+        this.home = true;
+      }
+      else if(window.scrollY*1.5 >= sectionSize && window.scrollY*1.5 <= sectionSize*2){ 
+        this.clearActive();
+        this.team = true;
+      }
+      else if(window.scrollY*1.5 >= sectionSize*2){
+        this.clearActive();
+        this.content = true;
+      }
+    }
   }
 
 }
