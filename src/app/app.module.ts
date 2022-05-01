@@ -6,20 +6,24 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavHomeComponent } from './components/nav-home/nav-home.component';
+import { TeamCardsComponent } from './components/team-cards/team-cards.component';
 
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavHomeComponent
+    NavHomeComponent,
+    TeamCardsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule
+    MatIconModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
