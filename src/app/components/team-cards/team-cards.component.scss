@@ -1,7 +1,8 @@
 .container{
-    padding-top: 5%;
+    padding: 5% 0px;
     text-align: center;
 }
+
 h1{
     font-size: 40px;
     color: #234F1E;
@@ -15,6 +16,9 @@ h1{
     align-items: center;
     justify-content: space-around;
     text-align: left;
+    .mat-card-image{
+        width: 95%;
+    }
 }
 
 .example-card {
