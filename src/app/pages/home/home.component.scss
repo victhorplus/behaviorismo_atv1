@@ -1,9 +1,7 @@
 
 section{
     width: 100vw;
-    height: 100vh;
-    position: sticky;
-    top: 0;
+    min-height: 100vh !important;
 }
 .first-section{
     background: url("../../../assets/logo.png");
@@ -28,7 +26,7 @@ section{
 
     .container{
         width: 100%;
-        height: 100%;
+        height: 100vh;
         // background-color: rgba(243, 229, 171, 0.3);
         background-color: rgba(0, 0, 0, 0.3);
         display: flex;
@@ -43,5 +41,6 @@ section{
 }
 
 .third-section{
-    background-color: rgb(230, 112, 112);
+    background-color: #F3E5AB;
+    min-height: fit-content;
 }
