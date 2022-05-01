@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavHomeComponent } from './components/nav-home/nav-home.component';
 import { TeamCardsComponent } from './components/team-cards/team-cards.component';
+import { TrilhaHomeComponent } from './components/trilha-home/trilha-home.component';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
@@ -16,7 +17,8 @@ import { MatCardModule } from '@angular/material/card';
     AppComponent,
     HomeComponent,
     NavHomeComponent,
-    TeamCardsComponent
+    TeamCardsComponent,
+    TrilhaHomeComponent
   ],
   imports: [
     BrowserModule,
